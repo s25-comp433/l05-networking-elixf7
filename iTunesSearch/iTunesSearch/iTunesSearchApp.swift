@@ -1,11 +1,14 @@
-//
-//  iTunesSearchApp.swift
-//  iTunesSearch
-//
-//  Created by Samuel Shi on 2/27/25.
-//
-
 import SwiftUI
+
+struct Response: Codable {
+    var results: [Result]
+}
+
+struct Result: Codable {
+    var trackId: Int
+    var trackName: String
+    var collectionName: String
+}
 
 @main
 struct iTunesSearchApp: App {
